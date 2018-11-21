@@ -34,7 +34,7 @@ C:\Users\James\config\fdfs_client.conf
 
 优先按OS文件系统路径读取，没有找到才查找项目classpath，尤其针对linux环境下的相对路径比如：
 fdfs_client.conf
-config/fdfs_client.conf
+config/fdfs_client.conf 
 
 connect_timeout = 2
 network_timeout = 30
