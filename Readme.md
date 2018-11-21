@@ -119,7 +119,10 @@ ClientGlobal.configInfo(): {
    2.1解压fastdfs-client-java-master
  　2.2进入fastdfs-client-java目录，在此处打开命令窗口 cmd 
    2.3输入 mvn clean install
+   ![image](https://github.com/zzm1223/fastdfs-client-java-master/blob/picture/%E6%88%AA%E5%9B%BE2.png)
    
 ### 3.如出现以下，则成功把fastdfs-client-java打包到本地的Maven仓库
-
+   ![image](https://github.com/zzm1223/fastdfs-client-java-master/blob/picture/%E6%88%AA%E5%9B%BE3.png)
+   ![image](https://github.com/zzm1223/fastdfs-client-java-master/blob/picture/%E6%88%AA%E5%9B%BE4.png)
 ### 至此，更新项目Maven，pom.xml文件就不会出现找不到fastdfs-client-java依赖了。（成功导入fastdfs-client-java依赖）
+   ![image](https://github.com/zzm1223/fastdfs-client-java-master/blob/picture/%E6%88%AA%E5%9B%BE5.png)
