@@ -1,21 +1,22 @@
-#FastDFS java client SDK
+# FastDFS java client SDK
+=== 
 【因为fastdfs-client-java-1.27-SNAPSHOT.jar这个依赖包在maven中央仓库是没有的，
 需要自己编译源码成jar本地安装到maven 的本地仓库，安装完以后就能正常引用了（注意：本地必须安装了Maven，并配置好Maven环境变量）】
 
 FastDFS Java Client API may be copied only under the terms of the BSD license.
-##使用ant从源码构建
+## 使用ant从源码构建
 
 ant clean package
 
-##使用maven从源码安装
+## 使用maven从源码安装
 
 mvn clean install
 
-##使用maven从jar文件安装
+## 使用maven从jar文件安装
 
 mvn install:install-file -DgroupId=org.csource -DartifactId=fastdfs-client-java -Dversion=${version} -Dpackaging=jar -Dfile=fastdfs-client-java-${version}.jar
 
-##在您的maven项目pom.xml中添加依赖
+## 在您的maven项目pom.xml中添加依赖
 
 <dependency>
     <groupId>org.csource</groupId>
@@ -23,7 +24,7 @@ mvn install:install-file -DgroupId=org.csource -DartifactId=fastdfs-client-java 
     <version>1.27-SNAPSHOT</version>
 </dependency>
 
-##.conf 配置文件、所在目录、加载优先顺序
+## .conf 配置文件、所在目录、加载优先顺序
 
 配置文件名fdfs_client.conf(或使用其它文件名xxx_yyy.conf)
 
@@ -74,7 +75,7 @@ fastdfs.tracker_servers = 10.0.11.201:22122,10.0.11.202:22122,10.0.11.203:22122
 注2：fastdfs.tracker_servers 配置项不能重复属性名，多个 tracker_server 用逗号","隔开
 注3：除了fastdfs.tracker_servers，其它配置项都是可选的
 
-##加载配置示例
+## 加载配置示例
 
 加载原 conf 格式文件配置：
 ClientGlobal.init("fdfs_client.conf");
@@ -97,7 +98,7 @@ ClientGlobal.initByProperties(props);
 String trackerServers = "10.0.11.101:22122,10.0.11.102:22122";
 ClientGlobal.initByTrackers(trackerServers);
 
-##检查加载配置结果：
+## 检查加载配置结果：
 
 System.out.println("ClientGlobal.configInfo(): " + ClientGlobal.configInfo());
 
@@ -111,14 +112,14 @@ ClientGlobal.configInfo(): {
   trackerServers = 10.0.11.101:22122,10.0.11.102:22122
 }
 
-#实例
-###1.下载上述fastdfs-client-java开发工具包
+# 实例
+### 1.下载上述fastdfs-client-java开发工具包
 
-###2.把fastdfs-client-java开发工具包打包到本地的Maven仓库
+### 2.把fastdfs-client-java开发工具包打包到本地的Maven仓库
    2.1解压fastdfs-client-java-master
  　2.2进入fastdfs-client-java目录，在此处打开命令窗口 cmd 
    2.3输入 mvn clean install
    
-###3.如出现以下，则成功把fastdfs-client-java打包到本地的Maven仓库
+### 3.如出现以下，则成功把fastdfs-client-java打包到本地的Maven仓库
 
-###至此，更新项目Maven，pom.xml文件就不会出现找不到fastdfs-client-java依赖了。（成功导入fastdfs-client-java依赖）
+### 至此，更新项目Maven，pom.xml文件就不会出现找不到fastdfs-client-java依赖了。（成功导入fastdfs-client-java依赖）
